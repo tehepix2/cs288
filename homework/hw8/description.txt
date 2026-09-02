@@ -1,0 +1,9 @@
+Problem 1 (Matrix Multiply): Split the matrix into row blocks, one per thread. 
+Since each thread only writes to its own rows, there's never any overlap between 
+threads, so no mutex or semaphore is needed. Checked correctness against a serial version.
+
+Problem 2 (15-Puzzle): Each state keeps track of the tile layout and where it came from, 
+so a solution path can be traced back once the goal is found. Already-seen states are 
+skipped so the search doesn't loop forever. BFS explores level by level and finds the 
+shortest solution. DFS dives as deep as possible before backtracking, so it can take 
+much longer on harder puzzles — that's just how DFS works, not a bug.

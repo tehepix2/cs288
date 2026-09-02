@@ -1,0 +1,4 @@
+The first problem was just a simple physics problem
+that needed a for loop to go through both arrays at the same time and 
+index with many threads.
+

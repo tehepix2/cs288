@@ -1,0 +1,7 @@
+apple
+banana
+cherry
+elderberry
+orange
+elderberry
+apple

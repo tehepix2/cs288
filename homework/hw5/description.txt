@@ -1,0 +1,10 @@
+For the first problem, I just took the standard radix sort
+for unsigned integers and simply switched the order the 
+buckets are joined when i = 31 (the last bit that decides the sign)
+and made it compatible with command line arguments.
+
+For problem 2, there was little to no changes required. The only
+change needed was casting the float to an unsigned int when using the 
+bitwise operator since they don't work with floats.
+Then, it was just making sure all the arguments worked
+with floats.

@@ -1,0 +1,69 @@
+Bitwise operations:
+Process raw binary data.
+Bit masking:
+a technique to manipulate bits in specific places.
+
+6 Different bitwise operations:
+1) Bitwise AND (&)
+2) Bitwise OR (|)
+3) Bitwise XOR (^)
+4) Bitwise complement (~) (one's complement)
+5) right shift (>>)
+6) left shift (<<)
+
+Why? TO MANIPULATE RAW DATA!!!!!
+
+Bit strings -> stream of 0's and 1's (raw binary data) -> unfortunately not really a data type in c
+
+how do we use it in c?
+unsigned types. (int, char, long) bitwise operations are not possible on floats.
+
+1) Bitwise AND (&)
+Truth table for AND:
+0 1| 0
+1 1| 1
+0 1| 0
+0 0| 0
+
+ex. 
+int x = 10
+int y = 5
+
+x & y = ?
+x = 0 0 0 0 1 0 1 0
+y = 0 0 0 0 0 1 0 1
+=   0 0 0 0 0 0 0 0 = 0-> comparing each bit using AND.
+
+2) Bitwise OR.
+x | y = ?
+x = 0 0 0 0 1 0 1 0 = 10
+y = 0 0 0 0 0 1 0 1 = 5
+| = 0 0 0 0 1 1 1 1 = 15
+
+3) Bitwise XOR. (not true if both are the same) XOR is used to toggle bits.
+XOR is true when the bits are different.
+Truth table:
+0 1 | 1
+1 1 | 0
+1 0 | 1
+0 0 | 0
+
+x ^ y = ?
+x = 0 0 0 0 1 0 1 0 = 10
+y = 0 0 0 0 0 1 0 1 = 5
+^ = 0 0 0 0 1 1 1 1 = 15
+
+4) Bitwise complement (one's complement) -> just flip the bits (unary operator)
+x = 0 0 0 0 1 0 1 0 = 10
+~x= 1 1 1 1 0 1 0 1 -> becomes negative number = -11 (when taking complement of positive number, the complement = -(number + 1)
+(when taking complement on negative number, it equals - (number + 1) so its the same formula pretty much
+
+5) Bitwise right shift (>>) - shifts the bits to the right (no way) based on the numbers specified. 
+
+10 >> 2 -> shift the bits of 10 to the right side by 2 positions.
+x = 10
+x >> 2 = 0 0 0 0 1 0 1 0 >> 2 -> truncate 2 rightmost bits -> 0 0 0 0 1 0 -> then add two zeroes on the right -> 0 0 0 0 0 0 1 0 = 2
+
+6) Bitwise left shift (<<) - shifts to the left (wow) the same way as the right shift.
+x = 10
+x << 2 = 10 << 2 = 0 0 0 0 1 0 1 0 << 2 -> truncate the two left-most bits - > 0 0 1 0 1 0 -> add two zeroes on the left -> 0 0 1 0 1 0 0 0 = 40

@@ -1,0 +1,7 @@
+Problem 1:
+I  sorted the lines alphabetically so that uniq works, and then used uniq -c to get a numbered list of frequencies. The, I cut the number and word into two files in order to change the order it is displayed using paste. Lastly, I used wc -l to get the number of lines as that is the number of unique words.
+
+Problem 2: This problem involved a lot of looping. I used counters many times to loop through the files and their sizes by using the head command and tail command. I added everything up using variable and arithmetic expansion.
+
+Problem 3: This problem was definitely not new. We have been tasked with writing bubble sort in different programming languages before, and this one was the same. You use a double loop, and then need a temp variable to not lose the nunmber when swapping, and then you just switched the positions of the objects in the array when
+the current item is bigger. The difficult part was just making sure bash didn't scream at wrong syntax.

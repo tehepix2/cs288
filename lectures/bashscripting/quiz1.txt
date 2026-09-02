@@ -1,0 +1,20 @@
+quiz1: wednesday 6/10/26
+
+end of lecture (last 20 mins)
+10 questions, 20 points total
+all questions are T/F, multiple choice, and fill in the blanks
+
+topics:
+every topic before 6/8 
+all commands learned
+file and directory perms
+commandline arguments
+head
+tail
+cut
+paste
+redirection (>, >>, <, |)
+wc
+sort
+
+

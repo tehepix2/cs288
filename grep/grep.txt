@@ -1,0 +1,36 @@
+Grep => global regular expression print
+-> look for patterns in a file or from standard input
+grep "a.*e" /etc/passwd
+-> any lines in /etc/passwd that have any words or parts that 
+start with a, contain any characters after, and then ends with the letter e.
+-> always finds the longest possible pattern in every line
+grep => options:
+-> -h (hide file)
+-> -n (number)
+-> -l (list files)
+-> -v (ignore/negate)
+-> -o (exact match)
+-> -i (ignore case)
+
+
+Sed => Stream Editor
+-> non-interactive text editor.
+-> all editing command come in form of a script
+-> looks for patterns in a file or from standard input
+Why use both Sed and grep?
+Grep excels at filtering/searching for a pattern
+Sed excels at manipulating patterns
+example: look for a pattern, and then change the pattern within the substrings found
+Is an editor:
+syntax: sed script file(s)
+script: address (pattern, line number), actions -> d (delete), s (substitute), y (transform), = (line number), p (print), q (quit)
+sed '1d' file.txt -> deletes first line of file.txt
+sed '/l.*x/d' file.txt -> deletes all instances of the pattern l.*x (such as the word linux).
+sed '/l.*x/,/mac/d' file.txt -> deletes all instances of pattern l.*x (such as linux) until the word mac is reached.
+sed -n '1,5p' file.txt displays lines 1-5 of the file.
+sed -n '1,$p' file.txt -> displays all lines until the end ($ means end of last line in sed)
+sed -n "1, /mac/p" file.txt -> displays lines from line 1 to line containing mac
+sed '/u..x/s/u..x/linux/' file.txt -> address/pattern/replacement => find pattern /u..x/, then substitute (s) where the pattern /u..x/ is and wherever the pattern is, if the pattern is /u..x/ then replace it with /linux/
+a script with no address is applied to all lines of the file unconditionally (e.g s/u..x/linux instead of /u..x/s/u..x/linux -> this only replaces the first occurence by default. s/linux/unix/g is all occurences. s/linux/unix/2 replaces the second occurence of linux.
+y: transform -> char to char replacement. similar to tr command
+echo "0x1ABFF" | sed '/0x[0-9A-Z]/y/ABF/abf/' -> make the characters in the string lowercase.

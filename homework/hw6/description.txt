@@ -1,0 +1,6 @@
+The program was difficult to figure out but it really
+was all about breaking the problem down into its different functions.
+The swap function that was used in the move functions,
+and the merge function requiring the unlinking of nodes
+to link to other nodes, it was a great way to become familiar
+with the A* search algorithm.

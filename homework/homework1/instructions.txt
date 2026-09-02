@@ -1,0 +1,26 @@
+Write a bash script that analyzes word frequency from a text file and displays the results in a
+sorted format.
+Note: Refer to the slides and handout provided for examples of checking whether a file or
+directory exists.
+Instructions Below:
+1. File Input & Validation:
+1a. Prompt the user to enter the path to a text file (e.g., Desktop/words.txt).
+1b. Verify that the file exists. If it does not exist, display an error message and exit the script.
+1c. Verify that the file is a regular file (not a directory). If it is not a regular file, display an error
+message and exit the script.
+2. Word Frequency Analysis:
+2a. Count how many times each word appears in the file.
+2b. Store the word and its frequency for further processing.
+3. Sorting Requirements:
+3a. Sort the results by frequency in descending order (most frequent words first).
+3b. If two words have the same frequency, sort them alphabetically.
+3c. Display the output in the format: word frequency (word followed by a space and then the
+count).
+4. Display Results:
+4a. Print each word and its frequency on a separate line.
+4b. At the end, display a summary showing the total number of unique words analyzed.
+Hints:
+● Use sort to group identical words together.
+● Use uniq -c to count occurrences of each word.
+● Use sort again with appropriate flags to sort by frequency (numerically, descending) and
+then alphabetically.
